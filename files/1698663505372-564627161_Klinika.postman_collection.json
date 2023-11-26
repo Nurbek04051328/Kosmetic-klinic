@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "f59e0f24-5183-403e-8231-f6cbdbcab4e4",
+		"name": "Klinika",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20109438",
+		"_collection_link": "https://speeding-astronaut-725156.postman.co/workspace/My-Workspace~b35a0bb4-91f6-42f0-8153-764daf1745f8/collection/20109438-f59e0f24-5183-403e-8231-f6cbdbcab4e4?action=share&source=collection_link&creator=20109438"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "AddAdmin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/auth/login/addadmin",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"auth",
+								"login",
+								"addadmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/auth/login",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckLogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/auth/checklogin",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"auth",
+								"checklogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/auth/checkuser",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"auth",
+								"checkuser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profession",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Специалист по перманентному макияжу (дермапигментации)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/profession",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"profession"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/profession",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"profession"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Кос",
+									"disabled": true
+								},
+								{
+									"key": "next",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "quantity",
+									"value": "20",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/profession/active",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"profession",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/profession/change/653767a7b263e0dcf9561f43",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"profession",
+								"change",
+								"653767a7b263e0dcf9561f43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindOne",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/profession/653767a7b263e0dcf9561f43",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"profession",
+								"653767a7b263e0dcf9561f43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Mzc2MWQwYjI2M2UwZGNmOTU2MWYwMiIsImlhdCI6MTY5ODEyODY0NSwiZXhwIjoxNjk4MjE1MDQ1fQ.2SHIpbxMR47QJnoSqmgT3lROzGfby-bZtsgg64zWIYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"653767a7b263e0dcf9561f43\",\r\n    \"title\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://klinika.bookblogs.uz/profession/",
+							"protocol": "https",
+							"host": [
+								"klinika",
+								"bookblogs",
+								"uz"
+							],
+							"path": [
+								"profession",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
